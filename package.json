@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/juanlunaco/platzi_js#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "materialize-css": "^0.97.8"
   }
 }
