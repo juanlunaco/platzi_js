@@ -21,6 +21,8 @@
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-sass": "^1.0.0",
-    "materialize-css": "^0.97.8"
+    "materialize-css": "^0.97.8",
+    "pu": "^2.0.3",
+    "pug": "^2.0.0-beta9"
   }
 }
