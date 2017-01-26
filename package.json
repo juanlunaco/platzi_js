@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "grunt"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,11 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
-    "materialize-css": "^0.97.8",
+    "grunt-contrib-watch": "^1.0.0",
+    "jquery": "^3.1.1",
+    "materialize-css": "^0.98.0",
+    "minifyify": "^7.3.4",
+    "page": "^1.7.1",
     "pug": "^2.0.0-beta9"
   }
 }
