@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         sass : {
             dist: {
                 files: {
-                    'assets/styles/main.css': 'assets/styles/main.scss'
+                    'lib/styles/main.css': 'lib/styles/main.scss'
                 },
                 options : {
                     style : "compressed"
@@ -17,6 +17,9 @@ module.exports = function(grunt) {
                 files : [
                     {
                         src: ['assets/**/*'], dest: 'public/'
+                    },
+                    {
+                        src: ['lib/styles/main.css'], dest: 'public/'
                     }
                 ]
             }
@@ -30,7 +33,8 @@ module.exports = function(grunt) {
                     // if the source file has an extension of es6 then
                     // we change the name of the source file accordingly.
                     // The result file's extension is always .js
-                    "./public/module.js": ["./lib/index.js"]
+                    "./public/scripts/module.js":
+                        ["./lib/scripts/index.js"]
                 }
             }
         }
@@ -42,7 +46,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-browserify');
 
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'copy']);
-    grunt.registerTask('script', ['browserify']);
-
+    grunt.registerTask('default', ['sass', 'copy', 'browserify']);
 };
