@@ -4,6 +4,7 @@
 var page = require('page');
 
 var dos = "W O R K I N G !!!";
+console.log(dos);
 
 var main = document.getElementById('main-container');
 
