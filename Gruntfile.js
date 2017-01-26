@@ -33,8 +33,20 @@ module.exports = function(grunt) {
                     // if the source file has an extension of es6 then
                     // we change the name of the source file accordingly.
                     // The result file's extension is always .js
-                    "./public/scripts/module.js":
+                    "./public/lib/scripts/module.js":
                         ["./lib/scripts/index.js"]
+                }
+            }
+        },
+        pug: {
+            compile: {
+                options: {
+                    data: {
+                        debug: false
+                    }
+                },
+                files: {
+                    'index.html': ['views/index.pug']
                 }
             }
         }
@@ -44,7 +56,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('grunt-contrib-pug');
 
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'copy', 'browserify']);
+    grunt.registerTask('default', ['sass', 'copy', 'browserify', 'pug']);
 };
